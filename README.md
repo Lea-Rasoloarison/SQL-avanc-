@@ -26,3 +26,5 @@ FROM wizard
 INNER JOIN player ON wizard.id=player.wizard_id
 GROUP BY fullname
 HAVING player.team_id = 1;
+WHERE DAYOFWEEK (enrollment_date) = 2 and team_id = 1
+ORDER BY enrollment_date
